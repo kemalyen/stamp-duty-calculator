@@ -109,7 +109,7 @@ new class extends Component
                         wire:model="additionalProperty"
                         class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-2 focus:ring-indigo-500 cursor-pointer" />
                     <label for="additional_property" class="ml-2 text-sm font-medium text-gray-700 cursor-pointer">
-                        Additional Property (3% surcharge applies)
+                        Additional Property (5% surcharge applies)
                     </label>
                 </div>
 

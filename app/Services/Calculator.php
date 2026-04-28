@@ -23,7 +23,7 @@ abstract class Calculator
             ],
         ],
         'additional_property' => [
-            'surcharge_rate' => 3,
+            'surcharge_rate' => 5,
         ],
     ];
 

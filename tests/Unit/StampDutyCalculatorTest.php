@@ -165,13 +165,13 @@ class StampDutyCalculatorTest extends TestCase
 
     public function test_additional_property_surcharge(): void
     {
-        // 3% surcharge on additional property
+        // 5% surcharge on additional property
         $result = $this->calculator->calculate(200000, false, true);
 
         // Standard: £75,000 at 2% = £1,500
-        // Plus 3% surcharge on full price: £200,000 × 3% = £6,000
-        // Total = £7,500
-        $this->assertEquals(7500, $result['total']);
+        // Plus 5% surcharge on full price: £200,000 × 5% = £10,000
+        // Total = £11,500
+        $this->assertEquals(11500, $result['total']);
     }
 
     public function test_additional_property_with_first_time_buyer(): void
@@ -180,9 +180,9 @@ class StampDutyCalculatorTest extends TestCase
         $result = $this->calculator->calculate(400000, true, true);
 
         // First-time buyer: £100,000 at 5% = £5,000
-        // Plus 3% surcharge: £400,000 × 3% = £12,000
-        // Total = £17,000
-        $this->assertEquals(17000, $result['total']);
+        // Plus 5% surcharge: £400,000 × 5% = £20,000
+        // Total = £25,000
+        $this->assertEquals(25000, $result['total']);
     }
 
     // ============================================

@@ -45,8 +45,9 @@ return [
     |--------------------------------------------------------------------------
     | Applies when purchasing an additional residential property while
     | retaining ownership of another property. Added on top of standard rates.
+    | Current rate: 5% (as of April 2026)
     */
     'additional_property' => [
-        'surcharge_rate' => 3,  // 3% flat surcharge
+        'surcharge_rate' => 5,  // 5% flat surcharge
     ],
 ];
