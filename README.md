@@ -31,3 +31,4 @@ First-time buyer:
 
 Additional Property
 - Property value: £500,000.00 → Stamp Duty: £40,00.00
+- Property value: £250,000.00 → Stamp Duty: £15,00.00
