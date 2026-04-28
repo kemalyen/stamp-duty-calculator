@@ -5,17 +5,17 @@ use Livewire\Component;
 
 new class extends Component
 {
-    public $propertyPrice = 0;
-    public $propertyType = 'residential';
-    public $firstTimeBuyer = false;
-    public $additionalProperty = false;
+    public float|int $propertyPrice;
+    public string $propertyType = 'residential';
+    public bool $firstTimeBuyer = false;
+    public bool $additionalProperty = false;
 
     public ?array $result = [];
-    public $error = null;
+    public ?string $error = null;
 
-    protected $rules = [
+    protected array $rules = [
         'propertyPrice' => 'required|numeric|min:0',
-        'propertyType' => 'required|in:residential,non_residential',
+        'propertyType' => 'required|in:residential',
     ];
 
     public function calculate(StampDutyCalculator $calculator)
@@ -82,7 +82,6 @@ new class extends Component
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition">
                         <option value="">Select property type</option>
                         <option value="residential">Residential</option>
-                        <option value="non_residential">Non-Residential</option>
                     </select>
                     @error('propertyType') <span class="text-red-500 text-sm mt-1">{{ $message }}</span> @enderror
                 </div>
